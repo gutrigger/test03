@@ -7,7 +7,9 @@
                 "pages/good-detail/good-detail",
                 "pages/good-pram/good-pram",
                 "pages/good-list/good-list",
-                "pages/order/order"
+                "pages/order/order",
+                "pages/address/address",
+                "pages/address-add/address-add"
         ],
         "window": {
                 "backgroundTextStyle": "light",

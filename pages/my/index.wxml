@@ -39,7 +39,7 @@
       <navigator url="/pages/order/order" >优惠券</navigator>
    </view>  
    <view class="my-item2">
-     <navigator url="/pages/order/order" >收货地址</navigator>
+     <navigator url="/pages/address/address" >收货地址</navigator>
    </view>   
 
 
