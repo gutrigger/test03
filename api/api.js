@@ -1,6 +1,6 @@
 const CONFIG = require('./config.js')
 const API_BASE_URL = ''
-const pathMsg = "lsj"
+const pathMsg = "/lsj"
 
 
 const request = (url, method, data) => {

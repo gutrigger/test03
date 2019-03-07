@@ -1,0 +1,25 @@
+<view class="container">
+<!-- 顶部类别栏 -->
+    <view class="status-box">
+        <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}"  data-index="{{index}}">
+            {{item}}
+            <view class="{{tabClass[index]}} {{index == currentType ? 'arrow-active' : ''}}" style=''></view>
+        </view>
+    </view>
+
+ <!-- 商品列表 -->
+ <view class="goods-container">
+        <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+           <view class="img-box">
+              <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true"/>
+           </view>
+           <view class="goods-title">{{item.name}}</view>
+           <view style='display:flex;'>
+            <view class="goods-price goods-price2" style='font-size:26rpx;'>¥ {{item.minPrice}}</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through;'>¥ {{item.originalPrice}}</view>
+           </view>           
+        </view>
+
+ </view>
+
+</view>

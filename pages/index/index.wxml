@@ -1,11 +1,12 @@
 <!--index.wxml-->
 <view class="container">
 
+<!-- 轮播图 -->
   <view class="swiper-container">
         <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
             <block wx:for="{{banners}}" wx:key="id">
                 <swiper-item>
-                    <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}_m" class="slide-image" width="750rpx" height="562.5rpx"/>
+                    <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}" class="slide-image" />
                 </swiper-item>
             </block>
         </swiper>
@@ -15,5 +16,52 @@
             </block>  
         </view>  
    </view>
-   
+
+   <!-- 推荐列表 -->
+   <view class="goods-container">
+        <view class='modal_tite' bindtap="toGoodList" >
+              <view style='float: left;font-weight: 700;'>|</view>
+              <view class='title_name'>鸡蛋</view>
+              <view class='arrow' style='float: right;'>
+                <image src='../../images/goods/arrow-right.png' style='width:18rpx;height:24rpx'></image>
+              </view>
+        </view>
+        <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+           <view class="img-box">
+              <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true"/>
+           </view>
+           <view class="goods-title">{{item.name}}</view>
+           <view style='display:flex;'>
+            <view class="goods-price goods-price2" style='font-size:26rpx;'>¥ {{item.minPrice}}</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through;'>¥ {{item.originalPrice}}</view>
+           </view>           
+        </view>
+    </view>
+
+    <view class="goods-container">
+        <view class='modal_tite' bindtap="toGoodList">
+              <view style='float: left;font-weight: 700;'>|</view>
+              <view class='title_name'>狼山鸡</view>
+              <view class='arrow' style='float: right;'>
+                <image src='../../images/goods/arrow-right.png' style='width:18rpx;height:24rpx'></image>
+              </view>
+        </view>
+        <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+           <view class="img-box">
+              <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true"/>
+           </view>
+           <view class="goods-title">{{item.name}}</view>
+           <view style='display:flex;'>
+            <view class="goods-price">¥ {{item.minPrice}}</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
+           </view>           
+        </view>
+    </view>
+
+    
+     <view class="to-all-btn"  bindtap="toGoodList">
+            全部商品
+    </view>
+    
+
 </view>

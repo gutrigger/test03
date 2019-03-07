@@ -1,9 +1,13 @@
 {
         "pages": [
+                "pages/my/index",
                 "pages/index/index",
                 "pages/logs/logs",
                 "pages/shop-cart/index",
-                "pages/my/index"
+                
+                "pages/good-detail/good-detail",
+                "pages/good-pram/good-pram",
+                "pages/good-list/good-list"
         ],
         "window": {
                 "backgroundTextStyle": "light",

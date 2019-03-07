@@ -1,0 +1,67 @@
+<!--pages/good-pram/good-pram.wxml-->
+<view class='container'>
+
+        <view class='product-info'>
+        
+                <view>
+                        <view class='product-msg-title' style=' padding-left: 30rpx;font-weight:700;'>|</view>
+                        <view class='product-msg-title'  style=' margin-left:10rpx;'>商品参数</view>
+                        <view style='clear:both'></view>
+                </view>
+
+                <view class='product-msg'>
+                        <view class='product-msg-cover'>
+                            <view class="product-param">
+                                品牌
+                            </view>  
+                            <view class="product-value">
+                                如东狼山鸡
+                            </view> 
+                            <view style='clear:both'></view> 
+                        </view>
+
+                         <view class='product-msg-cover' >
+                            <view class="product-param">
+                               包装
+                            </view>  
+                            <view class="product-value">
+                              礼盒装
+                            </view>  
+                            <view style='clear:both'></view>
+                        </view>
+
+                        <view class='product-msg-cover'>
+                            <view class="product-param">
+                               产地
+                            </view>  
+                            <view class="product-value">
+                              国产
+                            </view>  
+                            <view style='clear:both'></view>
+                        </view>
+
+                        <view class='product-msg-cover'>
+                            <view class="product-param">
+                               净含量
+                            </view>  
+                            <view class="product-value">
+                               1.4kg
+                            </view>  
+                            <view style='clear:both'></view>
+                        </view>
+
+                         <view class='product-msg-cover'>
+                            <view class="product-param">
+                               存储温度
+                            </view>  
+                            <view class="product-value">
+                               -18℃
+                            </view>  
+                            <view style='clear:both'></view>
+                        </view>
+
+                </view>
+
+        </view>
+
+</view>

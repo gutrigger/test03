@@ -1,0 +1,33 @@
+/* pages/good-pram/good-pram.wxss */
+.product-info{
+  background-color: #fff;
+  padding: 24rpx 0 0 0;
+  margin-bottom: 24rpx;
+  width: 100%;
+  position: relative;
+
+}
+.product-msg-title{
+        float: left;
+        font-size: 32rpx;
+}
+.product-param{
+        float: left;
+        font-size: 30rpx;
+
+}
+.product-value{
+
+       float: right;
+        font-size: 30rpx; 
+}
+.product-msg{
+        margin-top: 20rpx;
+        padding:  0 35rpx;
+       
+}
+.product-msg-cover{
+        width:100%;
+        margin-top:20rpx;
+
+}
