@@ -2,8 +2,8 @@
   min-height: 100%;
   overflow: hidden;
   overflow-y: hidden;
+  background-color: #fff;
 }
-
 
 .userinfo {
   display: flex;
@@ -13,8 +13,8 @@
 }
 
 .userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
+  width: 120rpx;
+  height: 120rpx;
   margin: 20rpx;
   border-radius: 50%;
 }
@@ -22,4 +22,50 @@
 .userinfo-nickname {
   color: #aaa;
   font-size: 14px;
+}
+
+.my-item{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 700rpx center;
+    background-size: 19rpx auto,750rpx auto;
+    border-bottom: 1px solid #eee;
+    height: 80rpx;
+    line-height: 80rpx;
+    /* padding-left: 60rpx; */
+    font-size:14px;
+}
+
+navigator{
+
+     padding-left: 60rpx;   
+}
+
+.order-shortcut {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.order-shortcut .item {
+  display: flex;
+  flex-direction: column;
+  width: 300rpx;
+  text-align: center;
+}
+.order-shortcut .item .icon {
+  width: 67rpx;
+  height: 67rpx;
+  margin-left: 92rpx;
+}
+.order-shortcut .item .text {
+  font-size: 12px;
+}
+
+.my-item2{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 700rpx center;
+    background-size: 19rpx auto,750rpx auto;
+    border-bottom: 1px solid #eee;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size:14px;
 }
