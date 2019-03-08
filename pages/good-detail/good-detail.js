@@ -103,6 +103,22 @@ Page({
                         })
                 }
         },
+        buyNow(e){
+                let that = this
+                let shoptype = e.currentTarget.dataset.shoptype
+                wx.navigateTo({
+                        url: "/pages/order-topay/order-topay?orderType=" + shoptype
+                })
+        },
+        addShopCar(e){
+
+        },
+        goShopCar(){
+
+                wx.reLaunch({
+                        url: "/pages/shop-cart/index"
+                });
+        }
 
        
 })

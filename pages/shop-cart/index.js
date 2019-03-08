@@ -8,7 +8,32 @@ Page({
                         totalScoreToPay: 0,
                         allSelect: true,
                         noSelect: false,
-                        list: []
+                        list: [
+                                {
+                                    name:"商品1",
+                                    pic:"http://hnf.uutele.com:28112/file/downLoad?ft=1&u=2&fid=J0000C3500078E4EF80",
+                                    label:"fsdofhsdfhsd",
+                                    price:19,
+                                    number:1
+
+                                },
+                                {
+                                        name: "商品2",
+                                        label: "fsdofhsdfhsd",
+                                        pic: "http://hnf.uutele.com:28112/file/downLoad?ft=1&u=2&fid=J0000C3500078E4EF80",
+                                        price: 19,
+                                        number: 2
+                                },
+                                {
+                                        name: "商品3",
+                                        label: "fsdofhsdfhsd",
+                                        pic: "http://hnf.uutele.com:28112/file/downLoad?ft=1&u=2&fid=J0000C3500078E4EF80",
+                                        price: 19,
+                                        number: 3
+                                        
+                                },
+
+                        ]
                 },
                 delBtnWidth: 120, //删除按钮宽度单位（rpx）
         },
@@ -44,8 +69,8 @@ Page({
                 if (shopCarInfoMem && shopCarInfoMem.shopList) {
                         shopList = shopCarInfoMem.shopList
                 }
-                this.data.goodsList.list = shopList;
-                this.setGoodsList(this.getSaveHide(), this.totalPrice(), this.allSelect(), this.noSelect(), shopList);
+                // this.data.goodsList.list = shopList;
+                this.setGoodsList(this.getSaveHide(), this.totalPrice(), this.allSelect(), this.noSelect(), this.data.goodsList.list);
         },
         toIndexPage: function () {
                 wx.switchTab({
@@ -206,16 +231,21 @@ Page({
                         // 添加判断当前商品购买数量是否超过当前商品可购买库存
                         var carShopBean = list[parseInt(index)];
                         var carShopBeanStores = 0;
-                        WXAPI.goodsDetail(carShopBean.goodsId).then(function (res) {
-                                carShopBeanStores = res.data.basicInfo.stores;
-                                if (list[parseInt(index)].number < carShopBeanStores) {
-                                        list[parseInt(index)].number++;
-                                        that.setGoodsList(that.getSaveHide(), that.totalPrice(), that.allSelect(), that.noSelect(), list);
-                                }
-                                that.setData({
+                        // WXAPI.goodsDetail(carShopBean.goodsId).then(function (res) {
+                        //         carShopBeanStores = res.data.basicInfo.stores;
+                        //         if (list[parseInt(index)].number < carShopBeanStores) {
+                        //                 list[parseInt(index)].number++;
+                        //                 that.setGoodsList(that.getSaveHide(), that.totalPrice(), that.allSelect(), that.noSelect(), list);
+                        //         }
+                        //         that.setData({
+                        //                 curTouchGoodStore: carShopBeanStores
+                        //         })
+                        // })
+                        list[parseInt(index)].number++;
+                        that.setGoodsList(that.getSaveHide(), that.totalPrice(), that.allSelect(), that.noSelect(), list);
+                        that.setData({
                                         curTouchGoodStore: carShopBeanStores
                                 })
-                        })
                 }
         },
         jianBtnTap: function (e) {
@@ -368,7 +398,7 @@ Page({
         navigateToPayOrder: function () {
                 wx.hideLoading();
                 wx.navigateTo({
-                        url: "/pages/to-pay-order/index"
+                        url: "/pages/order-topay/order-topay"
                 })
         }
 

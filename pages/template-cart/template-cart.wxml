@@ -12,7 +12,7 @@
 
 <template name="cart-goods-list">
     <view class="list-top">
-        <view class="label">狼山鸡商城</view>
+        <view class="label">已选商品</view>
         <view class="edit-btn" hidden="{{!saveHidden}}" bindtap="editTap">编辑</view>
         <view class="edit-btn" hidden="{{saveHidden}}" bindtap="saveTap">完成</view>
     </view>

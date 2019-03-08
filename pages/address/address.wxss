@@ -27,6 +27,7 @@
 }
 .address .left-text .name-tel{
     margin-bottom: 20rpx;
+     font-size: 30rpx;
 }
 
 .tel{

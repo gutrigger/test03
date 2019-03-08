@@ -112,8 +112,8 @@
           </view>    
 
 
-        <!-- 规格选择弹出  -->
-          <view class="show-popup" hidden="{{hideShopPopup}}" catchtouchmove="true">
+    <!-- 规格选择弹出  -->
+    <view class="show-popup" hidden="{{hideShopPopup}}" catchtouchmove="true">
         <view class="popup-mask" bindtap="closePopupTap"></view>
         <view class="popup-contents">
              <view class="pop-goods-info">
@@ -141,7 +141,7 @@
              <view class="popup-join-btn" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">
                 加入购物车
              </view>
-             <view class="popup-join-btn" data-shopType="{{shopType}}" wx:if="{{shopType =='tobuy' || shopType =='toPingtuan'}}" bindtap="buyNow">
+             <view class="popup-join-btn" data-shopType="{{shopType}}" wx:if="{{shopType =='tobuy'}}" bindtap="buyNow">
                 立即购买
              </view>                      
         </view>
